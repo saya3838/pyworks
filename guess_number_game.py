@@ -5,10 +5,12 @@ try:
     x = input('当てる数字の範囲を指定してください。（正の整数で入力。）')
     if len(x) !=0:
       answer = random.randint(1, int(x))
+      count = 0
       while True:
         guess = int(input('数字を当ててください。答えは…'))
+        count += 1
         if answer == guess:
-          print('あたりです！！')
+          print('あたりです！！'+str(count)+'回目で当たりました。')
           break
         elif answer > guess:
           print('答えはそれよりも大きいです。')
